@@ -3,12 +3,6 @@ import java.awt.*;
 import java.io.IOException;
 import java.util.*;
 
-import javax.swing.*;
-import java.awt.*;
-import java.io.IOException;
-import java.util.Random;
-
-
 public class Main extends JFrame {
     private static int size = 20;
     private static char[][] myMap = startMap(size);
