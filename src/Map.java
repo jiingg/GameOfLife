@@ -2,7 +2,7 @@ import java.util.Random;
 
 public class Map {
 
-    public char[][] startMap(int startSize) {
+    public static char[][] startMap(int startSize) {
         boolean life;
         char[][] map = new char[startSize][startSize];
 
@@ -13,6 +13,7 @@ public class Map {
                 if (life) {
                     map[i][j] = 'O';
                     //System.out.print(map[i][j]);
+
                 } else {
                     map[i][j] = 'X';
                     //System.out.print(map[i][j]);
@@ -92,16 +93,16 @@ public class Map {
                             afterMap[i][j] = 'O';
                             //System.out.print(afterMap[i][j]);
                     } else {
-                            afterMap[i][j] = ' ';
+                            afterMap[i][j] = 'X';
                             //System.out.print(afterMap[i][j]);
                     }
 
-                } else if (startMap[i][j] == ' ') {
+                } else if (startMap[i][j] == 'X') {
                     if (count == 3) {
                             afterMap[i][j] = 'O';
                             //System.out.print(afterMap[i][j]);
                     } else {
-                            afterMap[i][j] = ' ';
+                            afterMap[i][j] = 'X';
                             //System.out.print(afterMap[i][j]);
                     }
 
